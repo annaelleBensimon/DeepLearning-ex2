@@ -1,0 +1,1568 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 1cm
+\bottommargin 2cm
+\headheight 1cm
+\headsep 1cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+מבוא ללמידה עמוקה - תרגיל
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\end_layout
+
+\begin_layout Author
+עידן רפאלי ואנאל בן-סימון
+\end_layout
+
+\begin_layout Section*
+חלק תכנותי
+\end_layout
+
+\begin_layout Enumerate
+לאחר שהרצנו את רשת 
+\begin_inset Formula $\text{Elman RNN}$
+\end_inset
+
+ הפשוטה על מימדים שונים בין 
+\begin_inset Formula $64$
+\end_inset
+
+ ל-
+\begin_inset Formula $128$
+\end_inset
+
+, קיבלנו את אחוזי הדיוק, ציוני 
+\begin_inset Formula $\text{F1}$
+\end_inset
+
+ ו-
+\begin_inset Formula $\text{ROC}$
+\end_inset
+
+ שניתן לראות בגרף הבא:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Figure_1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כפי שניתן לראות בגרף, אחוז הדיוק הגבוה ביותר, וכן ציון 
+\begin_inset Formula $\text{F1}$
+\end_inset
+
+ ו-
+\begin_inset Formula $\text{ROC}$
+\end_inset
+
+ הגבוהים ביותר, התקבלו כאשר המימד הוא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $72$
+\end_inset
+
+.
+ אחוז הדיוק המדויק כאשר המימד הוא 
+\begin_inset Formula $80$
+\end_inset
+
+ הוא 
+\begin_inset Formula $0.824$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+לאחר שהרצנו את רשת 
+\begin_inset Formula $\text{GRU}$
+\end_inset
+
+ הפשוטה על מימדים שונים בין 
+\begin_inset Formula $64$
+\end_inset
+
+ ל-
+\begin_inset Formula $128$
+\end_inset
+
+, קיבלנו את אחוזי הדיוק, ציוני 
+\begin_inset Formula $\text{F1}$
+\end_inset
+
+ ו-
+\begin_inset Formula $\text{ROC}$
+\end_inset
+
+ שניתן לראות בגרף הבא:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Figure_2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כפי שניתן לראות בגרף, אחוז הדיוק הגבוה ביותר, וכן ציון 
+\begin_inset Formula $\text{F1}$
+\end_inset
+
+ ו-
+\begin_inset Formula $\text{ROC}$
+\end_inset
+
+ הגבוהים ביותר, התקבלו כאשר המימד הוא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $88$
+\end_inset
+
+.
+ אחוז הדיוק המדויק כאשר המימד הוא 
+\begin_inset Formula $64$
+\end_inset
+
+ הוא 
+\begin_inset Formula $0.814$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+ניסינו מספר ארכיטקטורות שונות למודל 
+\begin_inset Formula $\text{FC}$
+\end_inset
+
+ עם ממוצע רגיל )ניתן לראות את כל הארכיטקטורות שבדקנו בקוד(, וקיבלנו שהארכיטקטורה
+ שמשיגה את אחוזי הדיוק הגבוהים ביותר )
+\begin_inset Formula $0.856$
+\end_inset
+
+(, מבין הארכיטקטורות שבדקנו, היא כזו: רשת בעלת
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+5
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+שכבות חבויות שכל האקטיבציות שלהן הן 
+\begin_inset Formula $\text{Relu}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+שכבה חבויה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $1$
+\end_inset
+
+ בגודל 
+\begin_inset Formula $100\times75$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+שכבה חבויה 
+\begin_inset Formula $2$
+\end_inset
+
+ בגודל 
+\begin_inset Formula $75\times50$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+שכבה חבויה 
+\begin_inset Formula $3$
+\end_inset
+
+ בגודל 
+\begin_inset Formula $50\times50$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+שכבה חבויה 
+\begin_inset Formula $4$
+\end_inset
+
+ בגודל 
+\begin_inset Formula $50\times25$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+שכבה חבויה 
+\begin_inset Formula $5$
+\end_inset
+
+ בגודל 
+\begin_inset Formula $25\times25$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+להלן דוגמה בה הפרדיקציה של מודל 
+\begin_inset Formula $\text{FC}$
+\end_inset
+
+ עם ממוצע רגיל הטוב ביותר צודקת בתחזית שלה:
+\begin_inset Formula 
+\[
+\text{this movie is very good and interesting}
+\]
+
+\end_inset
+
+זוהי ביקורת טובה, והמודל אכן מכריע על ביקורת זו 
+\begin_inset Formula $\text{Positive}$
+\end_inset
+
+ )ציון כללי של 
+\begin_inset Formula $0.6679857$
+\end_inset
+
+(.
+ להלן הציונים לכל מילה בביקורת:
+\begin_inset Formula 
+\[
+\begin{array}{c|c}
+\text{this} & -0.018179107\\
+\text{movie} & -0.05298653\\
+\text{is} & 0.0583273\\
+\text{very} & 0.13450679\\
+\text{good} & 0.20255801\\
+\text{and} & 0.08384424\\
+\text{interesting} & -0.25712827
+\end{array}
+\]
+
+\end_inset
+
+המודל החליט להעניק למילים 
+\begin_inset Formula $\text{very}$
+\end_inset
+
+ ו-
+\begin_inset Formula $\text{good}$
+\end_inset
+
+ ציון גבוה יחסית, שעזר כנראה להכריע את ההכרעה הסופית לגבי הביקורת.
+ נשים לב כי אמנם המילה 
+\begin_inset Formula $\text{interesting}$
+\end_inset
+
+ רומזת על ביקורת טובה, אך המודל דווקא בחר להעניק לה ציון נמוך )אך זה לא
+ שינה את ההכרעה שלו על הביקורת כולה(.
+\end_layout
+
+\begin_layout Standard
+להלן דוגמה בה הפרדיקציה של מודל 
+\begin_inset Formula $\text{FC}$
+\end_inset
+
+ עם ממוצע רגיל טועה בתחזית שלה:
+\begin_inset Formula 
+\[
+\text{this movie is not good at all}
+\]
+
+\end_inset
+
+זוהי ביקורת רעה, אך המודל מכריע על ביקורת זו 
+\begin_inset Formula $\text{Positive}$
+\end_inset
+
+ )ציון כללי של 
+\begin_inset Formula $0.6416787$
+\end_inset
+
+(.
+ להלן הציונים לכל מילה בביקורת:
+\begin_inset Formula 
+\[
+\begin{array}{c|c}
+\text{this} & -0.018179107\\
+\text{movie} & -0.05298653\\
+\text{is} & 0.0583273\\
+\text{not} & -0.10613009\\
+\text{good} & 0.20255801\\
+\text{at} & -0.008520244\\
+\text{all} & -0.010323846
+\end{array}
+\]
+
+\end_inset
+
+המודל החליט להעניק למילה 
+\begin_inset Formula $\text{good}$
+\end_inset
+
+ ציון גבוה יחסית, שעזר כנראה להכריע את ההכרעה הסופית לגבי הביקורת, אך הוא
+ לא קישר את המילה 
+\begin_inset Formula $\text{not}$
+\end_inset
+
+ שהופיע לפניו למילה זו, שבעצם הופכת את משמעותה.
+\end_layout
+
+\begin_layout Standard
+נשים לב שבשתי הדוגמאות, המודל החליט להעניק ציון גבוה )או נמוך( יחסית למילים
+ שלא נראות משמעותיות וחשובות לצורך הקלסיפיקציה )למשל מילות קישור כמו 
+\begin_inset Formula $\text{and}$
+\end_inset
+
+(.
+ מכיוון שהציון נקבע מסכום רגיל, המשקל של כל מילה זהה בחישוב הציון הסופי,
+ ולכן למילים כאלו יש השפעה לא פחותה על הציון הסופי לעומת מילים יותר משמעותיות
+ לצורך הקלסיפיקציה.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+לאחר ששינינו את הרשת כך שהיא תכריע את הציון לכל מילה בצורה משוקללת )עם 
+\begin_inset Formula $2$
+\end_inset
+
+ פלטים במקום 
+\begin_inset Formula $1$
+\end_inset
+
+(, קיבלנו שאחוז הדיוק עלה ל-
+\begin_inset Formula $0.866$
+\end_inset
+
+, וזה נובע לדעתנו מכך שהרשת יודעת כעת להבחין יותר טוב מהן המילים החשובות
+ לצורך הקלסיפיקציה )כאלו עם משקל גבוה, כמו מילות תואר( ומהן המילים שפחות
+ משמעותיות )כאלו עם משקל נמוך, כמו מילות קישור(.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+ניסינו מספר ארכיטקטורות שונות למודל 
+\begin_inset Formula $\text{FC}$
+\end_inset
+
+ עם ממוצע משוקלל )ניתן לראות את כל הארכיטקטורות שבדקנו בקוד(, וקיבלנו שהארכיטקטו
+רה שמשיגה את אחוזי הדיוק הגבוהים ביותר )
+\begin_inset Formula $0.866$
+\end_inset
+
+(, מבין הארכיטקטורות שבדקנו, היא כזו: רשת בעלת 
+\begin_inset Formula $3$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+שכבות חבויות שכל האקטיבציות שלהן הן 
+\begin_inset Formula $\text{Relu}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+שכבה חבויה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $1$
+\end_inset
+
+ בגודל 
+\begin_inset Formula $100\times75$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+שכבה חבויה 
+\begin_inset Formula $2$
+\end_inset
+
+ בגודל 
+\begin_inset Formula $75\times50$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+שכבה חבויה 
+\begin_inset Formula $3$
+\end_inset
+
+ בגודל 
+\begin_inset Formula $50\times25$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+להלן דוגמה בה הפרדיקציה של מודל 
+\begin_inset Formula $\text{FC}$
+\end_inset
+
+ עם ממוצע משוקלל הטוב ביותר צודקת בתחזית שלה:
+\begin_inset Formula 
+\[
+\text{this movie is very good and interesting}
+\]
+
+\end_inset
+
+זוהי ביקורת טובה, והמודל אכן מכריע על ביקורת זו 
+\begin_inset Formula $\text{Positive}$
+\end_inset
+
+ )ציון כללי של 
+\begin_inset Formula $0.8355199$
+\end_inset
+
+(.
+ להלן הציונים והמשקלים )לפני הפעלת 
+\begin_inset Formula $\text{Softmax}$
+\end_inset
+
+( לכל מילה בביקורת:
+\begin_inset Formula 
+\[
+\begin{array}{c|c|c}
+\text{word} & \text{sub-score} & \text{weight}\\
+\hline \text{this} & 2.9102345 & -8.578235\\
+\text{movie} & 1.3391106 & -9.815736\\
+\text{is} & 9.166944 & -7.0207214\\
+\text{very} & 9.913178 & -2.0933437\\
+\text{good} & 7.3660913 & -1.7420683\\
+\text{and} & 13.439446 & -3.345277\\
+\text{interesting} & 5.587928 & -8.700354
+\end{array}
+\]
+
+\end_inset
+
+המודל החליט להעניק למילים 
+\begin_inset Formula $\text{very}$
+\end_inset
+
+ ו-
+\begin_inset Formula $\text{good}$
+\end_inset
+
+ ציון גבוה יחסית, וכן משקל גבוה יחסית למילים האחרות, מה שעזר כנראה להכריע
+ את ההכרעה הסופית לגבי הביקורת.
+ בנוסף, המודל אמנם העניק ציון גבוה יחסית למילות קישור כמו 
+\begin_inset Formula $\text{is}$
+\end_inset
+
+ ו-
+\begin_inset Formula $\text{and}$
+\end_inset
+
+, אבל הוא העניק להן משקל נמוך יותר, ולכן ההשפעה שלהן פחותה על הציון הסופי.
+ המודל גם העניק משקל נמוך למילים שהן כנראה נפוצות באופן כללי בביקורות, כמו
+ 
+\begin_inset Formula $\text{movie}$
+\end_inset
+
+ ו-
+\begin_inset Formula $\text{this}$
+\end_inset
+
+, ולכן ככל הנראה הן לא רומזות הרבה על אופי הביקורת.
+ כן מעניין לציין שהמודל החליט להעניק ציון נמוך, וגם משקל נמוך יחסית למילה
+ 
+\begin_inset Formula $\text{interesting}$
+\end_inset
+
+, ואנחנו משערים שזה נובע מכך, שלפחות מהבדיקה שלנו, המילה מופיעה בהרבה ביקורות
+ באופן כללי, וגם לאו דווקא בביקורות חיוביות או שליליות )למשל הרבה מופעים
+ של 
+\begin_inset Formula $\text{not interesting}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+להלן דוגמה בה הפרדיקציה של מודל 
+\begin_inset Formula $\text{FC}$
+\end_inset
+
+ עם ממוצע רגיל טועה בתחזית שלה:
+\begin_inset Formula 
+\[
+\text{this movie is not good at all}
+\]
+
+\end_inset
+
+זוהי ביקורת רעה, אך המודל מכריע על ביקורת זו 
+\begin_inset Formula $\text{Positive}$
+\end_inset
+
+ )ציון כללי של 
+\begin_inset Formula $0.5629153$
+\end_inset
+
+(.
+ להלן הציונים לכל מילה בביקורת:
+\begin_inset Formula 
+\[
+\begin{array}{c|c|c}
+\text{word} & \text{sub-score} & \text{weight}\\
+\hline \text{this} & 2.9102345 & -8.578235\\
+\text{movie} & 1.3391106 & -9.815736\\
+\text{is} & 9.166944 & -7.0207214\\
+\text{not} & -7.359451 & -1.8712106\\
+\text{good} & 7.3660913 & -1.7420683\\
+\text{at} & 4.559984 & -13.329589\\
+\text{all} & 0.5402162 & -4.6084385
+\end{array}
+\]
+
+\end_inset
+
+המודל החליט להעניק למילה 
+\begin_inset Formula $\text{good}$
+\end_inset
+
+ ציון גבוה יחסית וגם משקל גבוה יחסית לאחרות, שעזר כנראה להכריע את ההכרעה
+ הסופית לגבי הביקורת, אך הוא לא קישר את המילה 
+\begin_inset Formula $\text{not}$
+\end_inset
+
+ שהופיע לפניו למילה זו, שבעצם הופכת את משמעותה.
+ גם כאן אפשר לראות שלמרות הציון הגבוה יחסית למילות הקישור 
+\begin_inset Formula $\text{is}$
+\end_inset
+
+ ו-
+\begin_inset Formula $\text{at}$
+\end_inset
+
+, המודל העניק להן משקל נמוך ולכן ההשפעה שלהן על הציון הסופי פחותה יותר.
+\end_layout
+
+\begin_layout Standard
+לסיכום אפשר לראות שבשתי הדוגמאות, המשקל שניתן למילים שאינן משמעותיות )למשל
+ מילות קישור כמו 
+\begin_inset Formula $\text{and}$
+\end_inset
+
+, 
+\begin_inset Formula $\text{is}$
+\end_inset
+
+( לצורך הקלסיפיקציה הוא נמוך יחסית, ולכן תת-הציון שלהן משפיע פחות על הציון
+ הסופי של הביקורת, לעומת מילים משמעותיות יותר )למשל מילות תואר כמו 
+\begin_inset Formula $\text{good}$
+\end_inset
+
+, 
+\begin_inset Formula $\text{horrible}$
+\end_inset
+
+( שקיבלו משקל גבוה.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+מומש בקוד
+\end_layout
+
+\begin_layout Enumerate
+לאחר שהוספנו שכבת 
+\begin_inset Formula $\text{Self-Attention}$
+\end_inset
+
+ למודל מסעיף 
+\begin_inset Formula $3$
+\end_inset
+
+, אחוזי הדיוק שלנו עלו ל-
+\begin_inset Formula $0.874$
+\end_inset
+
+.
+ לדעתנו זה נובע מכך שהרשת כעת יודעת למצוא את המילים הרלוונטיות לצורך הסיווג
+ בצורה טובה יותר, ואף למצוא הקשרים בין מילים, כך שלמשל המילה 
+\begin_inset Formula $\text{not}$
+\end_inset
+
+ הופכת את המשמעות של המילה שמופיע לאחר מכן.
+ אפשר לראות זאת בתוצאות בכך שהמודל מסווג את המשפט 
+\begin_inset Formula $\text{"This movie is not goot at all"}$
+\end_inset
+
+ בתור ביקורת שלילית, שזה אכן נכון, וזה משהו שהמודל מסעיף 
+\begin_inset Formula $3$
+\end_inset
+
+ לא הצליח לעשות.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+להלן דוגמה נוספת בה הפרדיקציה של מודל 
+\begin_inset Formula $\text{FC}$
+\end_inset
+
+ עם שכבת 
+\begin_inset Formula $\text{Self-Attention}$
+\end_inset
+
+ וממוצע משוקלל צודקת בתחזית שלה:
+\begin_inset Formula 
+\[
+\text{this movie is bad and horrible}
+\]
+
+\end_inset
+
+זוהי ביקורת רעה, והמודל אכן מכריע על ביקורת זו 
+\begin_inset Formula $\text{Negative}$
+\end_inset
+
+ )ציון כללי של 
+\begin_inset Formula $0.013739079$
+\end_inset
+
+(.
+ להלן הציונים לכל מילה בביקורת:
+\begin_inset Formula 
+\[
+\begin{array}{c|c|c}
+\text{word} & \text{sub-score} & \text{weight}\\
+\hline \text{this} & -12.14016 & -1.3804729\\
+\text{movie} & -16.946802 & -1.8392323\\
+\text{is} & -11.297283 & -1.7930626\\
+\text{bad} & -17.438004 & -2.2817314\\
+\text{and} & 7.5154495 & -2.7498808\\
+\text{horrible} & -26.375221 & -2.4981136
+\end{array}
+\]
+
+\end_inset
+
+המודל החליט להעניק למילים 
+\begin_inset Formula $\text{bad}$
+\end_inset
+
+ ו-
+\begin_inset Formula $\text{horrible}$
+\end_inset
+
+ ציון נמוך יחסית, ממה שעזר כנראה להכריע את ההכרעה הסופית לגבי הביקורת.
+\end_layout
+
+\begin_layout Standard
+להלן דוגמה בה הפרדיקציה של מודל 
+\begin_inset Formula $\text{FC}$
+\end_inset
+
+ עם שכבת 
+\begin_inset Formula $\text{Self-Attention}$
+\end_inset
+
+ וממוצע משוקלל טועה בתחזית שלה:
+\begin_inset Formula 
+\[
+\text{the movie was mostly good but the end was disappointing}
+\]
+
+\end_inset
+
+זוהי ביקורת שנחשבת לטובה ברובה, אך המודל מכריע על ביקורת זו 
+\begin_inset Formula $\text{Negative}$
+\end_inset
+
+ )ציון כללי של 
+\begin_inset Formula $0.009636521$
+\end_inset
+
+(.
+ להלן הציונים לכל מילה בביקורת:
+\begin_inset Formula 
+\[
+\begin{array}{c|c|c}
+\text{word} & \text{sub-score} & \text{weight}\\
+\hline \text{the} & 1.6911106 & -4.4560986\\
+\text{movie} & -0.556497 & -4.7698693\\
+\text{was} & -0.083800495 & -2.1263433\\
+\text{mostly} & -5.183524 & -1.9079744\\
+\text{good} & 2.4600856 & -1.4575385\\
+\text{but} & 2.7267108 & -2.679403\\
+\text{the} & 1.1359525 & -5.0292974\\
+\text{end} & 4.6473975 & -1.7039229\\
+\text{was} & -1.4433919 & -3.064852\\
+\text{disappointing} & -11.622562 & 0.39833865
+\end{array}
+\]
+
+\end_inset
+
+המודל החליט לתת למשפט סיווג שלילי, כנראה בגלל שהסוף של המשפט )ובפרט המילה
+ 
+\begin_inset Formula $\text{disappointing}$
+\end_inset
+
+ שקיבלה ציון נמוך מאוד ומשקל גבוה יחסית( רומזות על ביקורת רעה, והוא לא הצליח
+ להבין שלמעשה הביקורת היא טובה יחסית ברובה.
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+שאלות תאורטיות
+\end_layout
+
+\begin_layout Enumerate
+כלל השרשרת:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+נחשב את הנגזרת:
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial x}f\left(x+y,2x,z\right) & =\frac{\partial f\left(x+y,2x,z\right)}{\partial x+y}\cdot\frac{\partial x+y}{\partial x}+\frac{\partial f\left(x+y,2x,z\right)}{\partial2x}\cdot\frac{\partial2x}{\partial x}+\frac{\partial f\left(x+y,2x,z\right)}{\partial z}\cdot\frac{\partial z}{\partial x}\\
+ & =\frac{\partial f\left(x+y,2x,z\right)}{\partial x+y}\cdot1+\frac{\partial f\left(x+y,2x,z\right)}{\partial2x}\cdot2+\frac{\partial f\left(x+y,2x,z\right)}{\partial z}\cdot0=\\
+ & =\frac{\partial f\left(x+y,2x,z\right)}{\partial x+y}+2\cdot\frac{\partial f\left(x+y,2x,z\right)}{\partial2x}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+נכתוב את כלל השרשרת ביחס ל-
+\begin_inset Formula $x$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial x}f_{1}\left(f_{2}\left(\ldots f_{n}\left(x\right)\right)\right)=\frac{\partial f_{1}\left(f_{2}\left(\ldots f_{n}\left(x\right)\right)\right)}{\partial f_{2}\left(\ldots f_{n}\left(x\right)\right)}\cdot\frac{\partial f_{2}\left(f_{3}\left(\ldots f_{n}\left(x\right)\right)\right)}{\partial f_{3}\left(\ldots f_{n}\left(x\right)\right)}\cdot\ldots\cdot\frac{\partial f_{n}\left(x\right)}{\partial x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+נציע להשתמש בפונקציית האקטיבציה 
+\begin_inset Formula $\text{Relu}\left(x\right)=\max\left(0,x\right)$
+\end_inset
+
+.
+ נשים לב, כי מהתשובה לסעיף ב', הנגזרת היא מכפלה של הרבה גורמים, בגלל כלל
+ השרשרת.
+ כל גורם הוא גזירה של פונקציית אקטיבציה, ובמקרה של 
+\begin_inset Formula $\text{Relu}$
+\end_inset
+
+, היא תהיה 
+\begin_inset Formula $0$
+\end_inset
+
+ או 
+\begin_inset Formula $1$
+\end_inset
+
+ )כתלות בערך שמועבר לאקטיבציה(, ולכן, במידה וכל הערכים, בכל השכבות יהיו
+ חיוביים, נקבל גרדיינט שאינו אפס, ואפשר להשתמש בו כדי להגיע למינימום, ויש
+ פחות סיכוי להתקל בבעיית הגרדיינט הנעלם.
+ לעומת זאת, בפונקציות אקטיבציה אחרות, כגון סיגמאויד או 
+\begin_inset Formula $\tanh$
+\end_inset
+
+, הגרדיינטים שלהם חסומים בערכם, והם תמיד יהיו בין 
+\begin_inset Formula $0$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ל-
+\begin_inset Formula $1$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+בערכם המוחלט, ומכפלה שלהם תהיה מספר קטן מאוד, ששואף ל-
+\begin_inset Formula $0$
+\end_inset
+
+.
+ כאשר מחשבים את ערכי הגרדיינטים במחשב, הם יחושבו בפועל להיות 
+\begin_inset Formula $0$
+\end_inset
+
+, כלומר בעיית הגרדיינט הנעלם תתרחש בסיכוי גבוה הרבה יותר.
+\end_layout
+
+\begin_layout Enumerate
+נגזור לפי כלל השרשרת:
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial x}f_{1}\left(x,f_{2}\left(x,f_{3}\left(\ldots f_{n-1}\left(x,f_{n}(x\right)\right)\right)\right) & =\frac{\partial f_{1}}{\partial x}+\frac{\partial f_{1}}{\partial f_{2}}\cdot\left(\frac{\partial f_{2}}{\partial x}+\frac{\partial f_{2}}{\partial f_{3}}\cdot\left(\frac{\partial f_{3}}{\partial x}+\frac{\partial f_{3}}{\partial f_{4}}\cdot\left(\ldots\left(\frac{\partial f_{n-1}}{\partial x}+\frac{\partial f_{n-1}}{\partial f_{n}}\cdot\left(\frac{\partial f_{n}}{\partial x}\right)\right)\right)\right)\right)\\
+ & =\sum_{i=1}^{n}\left[\prod_{j=1}^{i-1}\left(\frac{\partial f_{j}}{\partial f_{j+1}}\right)\cdot\frac{\partial f_{i}}{\partial x}\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+נסמן 
+\begin_inset Formula $a=x+g\left(x+h\left(x\right)\right)$
+\end_inset
+
+, 
+\begin_inset Formula $b=x+h\left(x\right)$
+\end_inset
+
+.
+ נשים לב שהנגזרת של הביטוי לפי 
+\begin_inset Formula $x$
+\end_inset
+
+ היא:
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial f\left(x+g\left(x+h\left(x\right)\right)\right)}{\partial x} & =\frac{\partial f\left(a\right)}{\partial a}\cdot\frac{\partial a}{\partial x}\\
+ & =\frac{\partial f\left(a\right)}{\partial a}\cdot\left(\left(1+\frac{\partial g\left(b\right)}{\partial b}\right)\cdot\frac{\partial b}{\partial x}\right)\\
+ & =\frac{\partial f\left(a\right)}{\partial a}\cdot\left(\left(1+\frac{\partial g\left(b\right)}{\partial b}\right)\cdot\left(1+\frac{\partial h\left(x\right)}{\partial x}\right)\right)\\
+ & =\frac{\partial f\left(a\right)}{\partial a}\cdot\left(1+\frac{\partial g\left(b\right)}{\partial b}+\frac{\partial h\left(x\right)}{\partial x}+\frac{\partial g\left(b\right)}{\partial b}\cdot\frac{\partial h\left(x\right)}{\partial x}\right)\\
+ & =\frac{\partial f\left(a\right)}{\partial a}+\frac{\partial f\left(a\right)}{\partial a}\cdot\frac{\partial g\left(b\right)}{\partial b}+\frac{\partial f\left(b\right)}{\partial b}\cdot\frac{\partial h\left(x\right)}{\partial x}+\frac{\partial f\left(a\right)}{\partial a}\cdot\frac{\partial g\left(b\right)}{\partial b}\cdot\frac{\partial h\left(x\right)}{\partial x}
+\end{align*}
+
+\end_inset
+
+נשים לב כי המחובר הראשון בשיוויון האחרון הוא הנגזרת של הפונקציה המקורית
+ לפי 
+\begin_inset Formula $a$
+\end_inset
+
+, והמחובר השני זה הנגזרת של הפונקציה המקורית כפול הנגזרת הפנימית שהיא 
+\begin_inset Formula $g$
+\end_inset
+
+ לפי 
+\begin_inset Formula $b$
+\end_inset
+
+, וכן הלאה, עד שהמחובר האחרון הוא מכפלת הנגזרות של כל הרמות בהרכבה.
+ כלומר הצלחנו לשמור לאורך כל תהליך הגזירה את ערכי הנגזרת של ההרכבות בשלבים
+ הראשונים עד הסוף, ולא רק המכפלה שלהם, וכך הצלחנו להתגבר על בעיית הגרדיינט
+ הנעלם.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+עבור בעיית זיהוי דיבור, הרשת המתאימה ביותר לדעתנו היא 
+\begin_inset Formula $\text{one-to-many RNN}$
+\end_inset
+
+ )או לחילופין 
+\begin_inset Formula $\text{LSTM}$
+\end_inset
+
+ או 
+\begin_inset Formula $\text{GRU}$
+\end_inset
+
+(: הקלט מגיע פעם אחת בתור רצועת שמע, ובכל יחידת זמן הרשת תפלוט מילה אחר
+ מילה את המילים שנאמרו בשמע.
+\end_layout
+
+\begin_layout Enumerate
+עבור בעיית מענה על שאלות: הרשת המתאימה ביותר לדעתנו היא 
+\begin_inset Formula $\text{RNN}$
+\end_inset
+
+ )או לחילופין 
+\begin_inset Formula $\text{LSTM}$
+\end_inset
+
+ או 
+\begin_inset Formula $\text{GRU}$
+\end_inset
+
+(, כאשר אפשר להוסיף לה בהתחלה שכבת 
+\begin_inset Formula $\text{Self-Attention}$
+\end_inset
+
+, כדי שהרשת תחפש את הקשר בין המילים הרלוונטיות בשאלה שמהם שהיא תוכל להסיק
+ את התשובה.
+ נבחין בין
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מקרים:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+אם מדובר במענה על שאלות עם תשובות סגורות )למשל מבחן אמריקאי, או השלמת מילה
+ בודדת(, הרשת 
+\begin_inset Formula $\text{RNN}$
+\end_inset
+
+ המתאימה היא מסוג 
+\begin_inset Formula $\text{many-to-one}$
+\end_inset
+
+ כי הקלט מגיע בתוך אוסף של מילים, והרשת תנתח את הקלט מילה אחר מילה, ובסופו
+ של דבר תפלוט פלט יחיד שהוא התשובה שלה לשאלה.
+\end_layout
+
+\begin_layout Enumerate
+אם מדובר במענה על שאלות עם תשובות פתוחות )שמורכבות מכמה מילים(, הרשת 
+\begin_inset Formula $\text{RNN}$
+\end_inset
+
+ המתאימה היא מסוג 
+\begin_inset Formula $\text{many-to-many}$
+\end_inset
+
+ כי הקלט מגיע בתוך אוסף של מילים, והרשת תנתח את הקלט מילה אחר מילה, ובנוסף
+ היא תפלוט את התשובה שלה, המורכבת מכמה מילים, מילה אחר מילה.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+עבור משימת 
+\begin_inset Formula $\text{Sentiment Analysis}$
+\end_inset
+
+: הרשת המתאימה ביותר לדעתנו היא רשת עם שכבת 
+\begin_inset Formula $\text{Self-Attention}$
+\end_inset
+
+ )ואולי אפילו 
+\begin_inset Formula $\text{Multi-Head Self-Attention}$
+\end_inset
+
+( ולאחר מכן מספר שכבות של 
+\begin_inset Formula $\text{FC}$
+\end_inset
+
+.
+ שכבת ה-
+\begin_inset Formula $\text{Self-Attenton}$
+\end_inset
+
+ נועדה כדי שהרשת תבחר את המילים הרלוונטיות לסיווג מתוך כלל המילים בביקורת
+ וגם למצוא הקשרים בין מילים )כך שהיא תבין למשל שאם המילה 
+\begin_inset Formula $\text{not}$
+\end_inset
+
+ מופיע לפני המילה 
+\begin_inset Formula $\text{good}$
+\end_inset
+
+, אז היא למעשה הופכת את משמעותה(.
+ ראוי לציין שארכיטקטורה זו הביאה עבורנו את התוצאות הטובות ביותר מבין הארכיטקטורו
+ת שבדקנו גם בחלק התכנותי
+\end_layout
+
+\begin_layout Enumerate
+עבור משימת זיהוי תמונות: הרשת המתאימה ביותר לדעתנו היא רשת קונבולוציה, כאשר
+ אפשר להוסיף לה אחרי כן שכבת 
+\begin_inset Formula $\text{Attention}$
+\end_inset
+
+ )או 
+\begin_inset Formula $\text{Hard-Attention}$
+\end_inset
+
+( - רשת הקונבולוציה תזהה, עם פילטרים שונים, כל מיני תבניות בתמונה, ושכבת
+ ה-
+\begin_inset Formula $\text{Attention}$
+\end_inset
+
+ תבחר את התבניות הרלוונטיות לצורך ההכרעה על האובייקט המופיע בתמונה.
+\end_layout
+
+\begin_layout Enumerate
+עבור משימת תרגום מילה בודדת: הרשת המתאימה ביותר לדעתנו היא רשת מסוג 
+\begin_inset Formula $\text{Fully-Connected}$
+\end_inset
+
+ - במקרה הזה הקלט הוא מילה בודדת, והפלט הוא מילה בודדת, ולכן זה פחות הגיוני
+ להשתמש ברשת 
+\begin_inset Formula $\text{RNN}$
+\end_inset
+
+ כלשהי, וגם שכבת 
+\begin_inset Formula $\text{Attention}$
+\end_inset
+
+ לא תעזור )כי כנראה שכל הקלט רלוונטי(, רשת קונבולוציה לא מתאימה גם היא למשימה
+ כמובן, ולכן לא נותר אלא להשתמש ברשת 
+\begin_inset Formula $\text{FC}$
+\end_inset
+
+ לצורך המשימה.
+ נבחין כי מדובר במשימה פשוטה יחסית, שאפילו אין צורך ברשת כדי לפתור אותה,
+ כי מספיק מילון פשוט לצורך תרגום בין מילים בודדות.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+אנו מניחים כי קיימת רשת מסוג 
+\begin_inset Formula $\text{Auto-Encoder}$
+\end_inset
+
+, שנקרא לה 
+\begin_inset Formula $AE$
+\end_inset
+
+, שיודעת לקודד תמונות למרחב 
+\begin_inset Formula $\text{Latent}$
+\end_inset
+
+ קטן יותר, ולשחזר את התמונות ממרחב זה.
+ נתאר את הארכיטקטורה של הרשת, שנקרא לה 
+\begin_inset Formula $N$
+\end_inset
+
+, כך: הרשת 
+\begin_inset Formula $N$
+\end_inset
+
+ תקבל בתור קלט משפט )בתור מטריצה של מילים המקודדים על-ידי 
+\begin_inset Formula $\text{Word2Vec}$
+\end_inset
+
+ למשל(, ותוציא כפלט וקטור השייך למרחב ה-
+\begin_inset Formula $\text{Latent}$
+\end_inset
+
+ של רשת 
+\begin_inset Formula $AE$
+\end_inset
+
+.
+ לאחר מכן נקח את ה-
+\begin_inset Formula $\text{Decoder}$
+\end_inset
+
+ מ-
+\begin_inset Formula $AE$
+\end_inset
+
+ ונשתמש בו כדי לתרגם את הפלט של 
+\begin_inset Formula $N$
+\end_inset
+
+ לתמונה.
+ הרשת 
+\begin_inset Formula $N$
+\end_inset
+
+ תכיל שכבת 
+\begin_inset Formula $\text{Attention}$
+\end_inset
+
+, כדי שהיא תוכל לבחור ממשפט הקלט את המילים הרלוונטיות לצורך קידוד וקטור
+ הפלט, ולאחר מכן תכיל מספר שכבות של רשת 
+\begin_inset Formula $\text{MLP}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+אנו מניחים כי קיימת רשת מסוג 
+\begin_inset Formula $\text{Auto-Encoder}$
+\end_inset
+
+, שנקרא לה 
+\begin_inset Formula $AE$
+\end_inset
+
+, שיודעת לקודד תמונות למרחב 
+\begin_inset Formula $\text{Latent}$
+\end_inset
+
+ קטן יותר, כך שכל רבע מהקידוד מתייחס לרביע של התמונה, ולשחזר את התמונות
+ ממרחב זה )כל רביע של התמונה משוחזר מהרבע המתאים בקידוד(.
+ נתאר את הארכיטקטורה של הרשת, שנקרא לה 
+\begin_inset Formula $N$
+\end_inset
+
+, כך: הרשת 
+\begin_inset Formula $N$
+\end_inset
+
+ תקבל בתור קלט משפט )בתור מטריצה של מילים המקודדים על-ידי 
+\begin_inset Formula $\text{Word2Vec}$
+\end_inset
+
+ למשל(, ותוציא כפלט וקטור השייך למרחב ה-
+\begin_inset Formula $\text{Latent}$
+\end_inset
+
+ של רשת 
+\begin_inset Formula $AE$
+\end_inset
+
+ )כלומר וקטור עם 
+\begin_inset Formula $4$
+\end_inset
+
+ חלקים, כל חלק מתייחס לרביע שונה בתמונה(.
+ לאחר מכן נקח את ה-
+\begin_inset Formula $\text{Decoder}$
+\end_inset
+
+ מ-
+\begin_inset Formula $AE$
+\end_inset
+
+ ונשתמש בו כדי לתרגם את הפלט של 
+\begin_inset Formula $N$
+\end_inset
+
+ לתמונה.
+ הרשת 
+\begin_inset Formula $N$
+\end_inset
+
+ תכיל שכבת 
+\begin_inset Formula $\text{Attention}$
+\end_inset
+
+, ולאחר מכן תכיל רשת 
+\begin_inset Formula $\text{LSTM}$
+\end_inset
+
+, שתפקידה לייצר בכל פעם רבע מהקידוד של התמונה, כך שבסהכ הרשת תרוץ למשך 
+\begin_inset Formula $4$
+\end_inset
+
+ צעדים, והקידוד המלא יהיה שרשור של ארבעת הפלטים מכל צעד.
+ 
+\series bold
+השאילתה )ה-
+\begin_inset Formula $\mathbf{query}$
+\end_inset
+
+(
+\series default
+ לשכבת ה-
+\begin_inset Formula $\text{Attention}$
+\end_inset
+
+ תגיע מה-
+\begin_inset Formula $\text{hidden state}$
+\end_inset
+
+ של ה-
+\begin_inset Formula $\text{LSTM}$
+\end_inset
+
+, ו
+\series bold
+המפתחות )ה-
+\begin_inset Formula $\mathbf{keys}$
+\end_inset
+
+(
+\series default
+ ו
+\series bold
+הערכים )ה-
+\begin_inset Formula $\mathbf{values}$
+\end_inset
+
+( 
+\series default
+יהיו המילים ממשפט הקלט )מיוצגים על-ידי הקידוד שלהם(.
+ הרעיון הוא שה-
+\begin_inset Formula $\text{hidden state}$
+\end_inset
+
+ יקודד בתוכו איזה רביע של תמונה הוא הולך לצייר בצעד הבא, והוא מבקש משכבת
+ ה-
+\begin_inset Formula $\text{Attention}$
+\end_inset
+
+ את המילים הרלוונטיות במשפט לצורך ציור אותו רביע.
+ 
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
